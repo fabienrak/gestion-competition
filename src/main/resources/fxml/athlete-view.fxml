@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #2c3e50#2c3e50;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.attila.controller.AthleteController">
+   <children>
+      <TableView fx:id="table_athlete" editable="true" layoutX="27.0" layoutY="189.0" onMouseClicked="#getAthleteInfo" prefHeight="492.0" prefWidth="756.0" />
+      <Button fx:id="btn_import" layoutX="27.0" layoutY="704.0" mnemonicParsing="false" onAction="#loadFile" prefHeight="42.0" prefWidth="150.0" style="-fx-background-radius: 25; -fx-background-color: #E74C3C#E74C3C;" text="Importer" textFill="#fcfcfc">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="label_fichier" layoutX="27.0" layoutY="147.0" prefHeight="26.0" prefWidth="756.0" textFill="#fcf7f7">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="811.0" layoutY="189.0" orientation="VERTICAL" prefHeight="492.0" prefWidth="3.0" />
+      <TabPane layoutX="838.0" layoutY="189.0" prefHeight="492.0" prefWidth="546.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="POIDS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #3c4a59#3c4a59;">
+                     <children>
+                        <Label fx:id="label_psk" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="59.0" prefHeight="67.0" prefWidth="205.0" style="-fx-background-color: #F75C4C#F75C4C;" textFill="#f5f5f5">
+                           <font>
+                              <Font name="Arial Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="36.0" layoutY="20.0" prefHeight="33.0" prefWidth="217.0" text="POIDS  SANS KIMONO (En Kg)" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="322.0" layoutY="20.0" prefHeight="33.0" prefWidth="158.0" text="POIDS  PESEE (En Kg)" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_field_pp" layoutX="322.0" layoutY="57.0" prefHeight="67.0" prefWidth="187.0">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btn_import1" layoutX="203.0" layoutY="179.0" mnemonicParsing="false" onAction="#verifInfo" prefHeight="42.0" prefWidth="150.0" style="-fx-background-radius: 25; -fx-background-color: #E74C3C#E74C3C;" text="Mettre a Jour" textFill="#fcfcfc">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="label_athlete_age" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="295.0" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #D66853#D66853;" textFill="#fcf7f7">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_athlete_genre" alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="295.0" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #D66853#D66853;" textFill="#fcf7f7">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_athlete_grade" alignment="CENTER" contentDisplay="CENTER" layoutX="376.0" layoutY="295.0" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #D66853#D66853;" textFill="#fcf7f7">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_athlete_info" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="357.0" prefHeight="49.0" prefWidth="497.0" textFill="#fcf7f7">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="CATEGORIE">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="btn_get_data" layoutX="220.0" layoutY="704.0" mnemonicParsing="false" onAction="#saveAthlete" prefHeight="42.0" prefWidth="150.0" style="-fx-background-radius: 25; -fx-background-color: #E74C3C#E74C3C;" text="Ajouter" textFill="#fcfcfc">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_get_ath_data" layoutX="411.0" layoutY="704.0" mnemonicParsing="false" onAction="#getAthleteData" prefHeight="42.0" prefWidth="150.0" style="-fx-background-radius: 25; -fx-background-color: #E74C3C#E74C3C;" text="select" textFill="#fcfcfc">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_goto_cat" layoutX="1176.0" layoutY="704.0" mnemonicParsing="false" onAction="#goToCategorie" prefHeight="42.0" prefWidth="181.0" style="-fx-background-radius: 25; -fx-background-color: #E74C3C#E74C3C;" text="Aller vers Categorie" textFill="#fcfcfc">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Pane layoutX="-12.0" prefHeight="135.0" prefWidth="1411.0" style="-fx-background-color: #E74C3C#E74C3C;">
+         <children>
+            <Button fx:id="btn_retour" contentDisplay="GRAPHIC_ONLY" layoutX="23.0" layoutY="36.0" mnemonicParsing="false" onAction="#backToDashboard" prefHeight="64.0" prefWidth="97.0" style="-fx-background-radius: 25; -fx-background-color: #E74C3C#E74C3C;" text="Retour" textFill="#fcfcfc">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="49.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/retour.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

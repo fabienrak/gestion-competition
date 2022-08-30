@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="533.0" prefWidth="771.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../../css/login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.attila.controller.LoginController">
+   <children>
+      <Pane prefHeight="533.0" prefWidth="816.0">
+         <children>
+            <Separator layoutX="339.0" layoutY="25.0" orientation="VERTICAL" prefHeight="446.0" prefWidth="9.0" style="-fx-background-color: #E74C3C#E74C3C;" />
+            <ImageView fitHeight="243.0" fitWidth="253.0" layoutX="56.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/bjj.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="69.0" layoutY="407.0" prefHeight="30.0" prefWidth="243.0" text="ATTILA JJB">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Pane layoutX="346.0" layoutY="1.0" prefHeight="533.0" prefWidth="473.0" style="-fx-background-color: #2c3e50#2c3e50;">
+               <children>
+                  <TextField fx:id="username_field" layoutX="156.0" layoutY="146.0" prefHeight="30.0" prefWidth="280.0" styleClass="input_username" stylesheets="@../../css/style.css">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="mdp_field" layoutX="156.0" layoutY="207.0" prefHeight="30.0" prefWidth="280.0">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Label layoutX="23.0" layoutY="142.0" prefHeight="39.0" prefWidth="164.0" text="Nom d'utilisateur :" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="207.0" prefHeight="30.0" prefWidth="137.0" text="Mot de Passe :" textFill="#fffefe">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_login" layoutX="156.0" layoutY="289.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="198.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 10;" text="Se Connecter" textFill="#eee8e8">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="172.0" layoutY="502.0" prefHeight="17.0" prefWidth="291.0" text="Made with          By Isha Fabian - Copyright  ATTILA 2022" textFill="#718ca1">
+                     <font>
+                        <Font name="Arial" size="11.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="226.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/heart.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

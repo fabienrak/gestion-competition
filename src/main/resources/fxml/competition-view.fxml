@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.attila.controller.CompetitionController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2c3e50#2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane layoutX="22.0" layoutY="211.0" prefHeight="575.0" prefWidth="1355.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tab_compet" styleClass="tab_compet" text="COMPETITION">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="568.0" prefWidth="969.0">
+                           <children>
+                              <Pane layoutY="-2.0" prefHeight="668.0" prefWidth="1355.0" style="-fx-background-color: #3c4a59#3c4a59;">
+                                 <children>
+                                    <Label layoutX="23.0" layoutY="82.0" prefHeight="31.0" prefWidth="116.0" text="Titre :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="titre_field" layoutX="123.0" layoutY="78.0" prefHeight="36.0" prefWidth="340.0" />
+                                    <Label layoutX="23.0" layoutY="319.0" prefHeight="31.0" prefWidth="116.0" text="Description :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="desc_field" layoutX="122.0" layoutY="321.0" prefHeight="33.0" prefWidth="341.0" />
+                                    <Label layoutX="23.0" layoutY="173.0" prefHeight="31.0" prefWidth="116.0" text="Lieu :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="lieu_field" layoutX="122.0" layoutY="172.0" prefHeight="38.0" prefWidth="342.0" />
+                                    <Label layoutX="23.0" layoutY="128.0" prefHeight="31.0" prefWidth="116.0" text="Date :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="date_debut_field" layoutX="122.0" layoutY="128.0" prefHeight="31.0" prefWidth="152.0" />
+                                    <Label layoutX="284.0" layoutY="129.0" prefHeight="31.0" prefWidth="116.0" text="Au :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="date_fin_field" layoutX="319.0" layoutY="128.0" prefHeight="32.0" prefWidth="145.0" />
+                                    <Label layoutX="23.0" layoutY="226.0" prefHeight="31.0" prefWidth="116.0" text="Type :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="type_field" layoutX="122.0" layoutY="223.0" prefHeight="35.0" prefWidth="342.0" />
+                                    <JFXButton fx:id="btn_enregistrer" buttonType="RAISED" defaultButton="true" layoutX="164.0" layoutY="383.0" onAction="#enregistrer_competition" prefHeight="45.0" prefWidth="163.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="Enregistrer" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/sauver.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Label layoutX="162.0" layoutY="24.0" prefHeight="24.0" prefWidth="245.0" text="Competition" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="23.0" layoutY="268.0" prefHeight="31.0" prefWidth="116.0" text="Organisateur :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="organisateur_field" layoutX="122.0" layoutY="274.0" prefHeight="34.0" prefWidth="342.0" />
+                                    <Separator layoutX="564.0" layoutY="72.0" orientation="VERTICAL" prefHeight="406.0" prefWidth="0.0" style="-fx-background-color: #E74C3C#E74C3C;" />
+                                    <Label layoutX="885.0" layoutY="24.0" prefHeight="24.0" prefWidth="245.0" text="Affiche" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="btn_enregistrer1" buttonType="RAISED" defaultButton="true" layoutX="858.0" layoutY="56.0" onAction="#enregistrer_competition" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="Upload" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/upload.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <ImageView fitHeight="389.0" fitWidth="669.0" layoutX="629.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="MATCH">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #3c4a59#3c4a59;" />
+                    </content>
+                  </Tab>
+                  <Tab text="TATAMI">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #3c4a59#3c4a59;" />
+                    </content>
+                  </Tab>
+                  <Tab text="PARTENAIRE">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #3c4a59#3c4a59;">
+                           <children>
+                              <Label layoutX="153.0" layoutY="38.0" prefHeight="56.0" prefWidth="293.0" text="PARTENAIRE" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="112.0" prefHeight="40.0" prefWidth="147.0" text="NOM PARTENAIRE :" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="nom_part_field" layoutX="195.0" layoutY="115.0" prefHeight="34.0" prefWidth="285.0" />
+                              <Label layoutX="27.0" layoutY="159.0" prefHeight="40.0" prefWidth="147.0" text="LOGO PARTENAIRE :" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btn_upload_logo" layoutX="195.0" layoutY="159.0" mnemonicParsing="false" onAction="#uploadLogo" prefHeight="33.0" prefWidth="118.0" style="-fx-background-radius: 20;" text="Upload" textFill="#212d40">
+                                 <font>
+                                    <Font name="Arial Bold" size="13.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/upload.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="27.0" layoutY="208.0" prefHeight="40.0" prefWidth="178.0" text="CONTACT PARTENAIRE :" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="contact_part_field" layoutX="195.0" layoutY="212.0" prefHeight="36.0" prefWidth="288.0" />
+                              <JFXButton fx:id="btn_add_part" layoutX="188.0" layoutY="279.0" prefHeight="38.0" prefWidth="133.0" style="-fx-background-radius: 20; -fx-background-color: #E74C3C#E74C3C;" text="Ajouter" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="38.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/sauver.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label fx:id="logo_name" layoutX="320.0" layoutY="164.0" prefHeight="31.0" prefWidth="683.0" text="Aucun Image" textFill="#fff9f9">
+                                 <font>
+                                    <Font name="Arial Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TableView layoutX="603.0" layoutY="27.0" prefHeight="481.0" prefWidth="726.0">
+                                <columns>
+                                  <TableColumn prefWidth="86.0" text="ID" />
+                                  <TableColumn minWidth="0.0" prefWidth="144.0" text="NOM PARTENAIRE" />
+                                    <TableColumn prefWidth="174.0" text="CONTACT" />
+                                    <TableColumn prefWidth="319.0" text="LOGO" />
+                                </columns>
+                              </TableView>
+                              <Label fx:id="logo_label" layoutX="21.0" layoutY="480.0" prefHeight="128.0" prefWidth="159.0" text="LOGO" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Pane layoutX="-1.0" prefHeight="135.0" prefWidth="1400.0" style="-fx-background-color: #E74C3C#E74C3C;">
+               <children>
+                  <Button fx:id="btn_retour" contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#competitionToDashboard" prefHeight="65.0" prefWidth="106.0" style="-fx-background-radius: 60px; -fx-background-color: #E74C3C#E74C3C;" text="Retour" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/retour.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

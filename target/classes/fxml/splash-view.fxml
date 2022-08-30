@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background_pane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.attila.controller.AppController">
+    <children>
+        <Label layoutX="233.0" layoutY="269.0" text="ATTILA JJB">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font></Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/bjj.jpg" />
+         </image>
+      </ImageView>
+      <ProgressIndicator fx:id="progress_start_app" layoutX="277.0" layoutY="318.0" prefHeight="47.0" prefWidth="45.0" progress="0.0" />
+    </children>
+</AnchorPane>

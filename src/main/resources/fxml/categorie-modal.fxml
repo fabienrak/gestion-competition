@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #364156#364156 #364156#364156;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.attila.controller.MatchController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="149.0" layoutY="14.0" prefHeight="33.0" prefWidth="320.0" text="Creer Categorie" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="72.0" prefHeight="26.0" prefWidth="144.0" text="Nom Categorie :" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="field_title_categorie" layoutX="170.0" layoutY="69.0" prefHeight="33.0" prefWidth="362.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn_create_categori" layoutX="574.0" layoutY="69.0" mnemonicParsing="false" onAction="#getData" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: #7D4E57#7D4E57 #7D4E57#7D4E57; -fx-background-radius: 20;" text="Creer" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

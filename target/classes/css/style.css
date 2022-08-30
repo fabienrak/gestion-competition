@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.ttf');
+}
+
+.btn_competition {
+    -fx-background-color: red;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    position: absolute;
+}
+
+.input_username {
+    -fx-border-radius: 20px;
+}

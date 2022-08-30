@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #212D40#212D40;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.attila.controller.ConfigurationController">
+   <children>
+      <JFXButton layoutX="65.0" layoutY="42.0" prefHeight="48.0" prefWidth="136.0" />
+   </children>
+</AnchorPane>

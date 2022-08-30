@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #2c3e50#2c3e50;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.attila.controller.PoolController">
+   <children>
+      <TableView fx:id="table_data_categorized" layoutX="27.0" layoutY="219.0" onMousePressed="#createPool" prefHeight="491.0" prefWidth="603.0">
+         <columns>
+            <TableColumn fx:id="COL_ID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="COL_NOM" prefWidth="75.0" text="NOM" />
+            <TableColumn fx:id="COL_PRENOM" prefWidth="75.0" text="PRENOM" />
+            <TableColumn fx:id="COL_GENRE" prefWidth="75.0" text="GENRE" />
+            <TableColumn fx:id="COL_AGE" prefWidth="75.0" text="AGE" />
+            <TableColumn fx:id="COL_CEINTURE" prefWidth="75.0" text="CEINTURE" />
+            <TableColumn fx:id="COL_POIDS" prefWidth="75.0" text="POIDS" />
+            <TableColumn fx:id="COL_CATEGORY" prefWidth="75.0" text="CATEGORIE" />
+         </columns></TableView>
+      <ComboBox fx:id="category_combobox" layoutX="133.0" layoutY="160.0" prefHeight="32.0" prefWidth="267.0" />
+      <Button fx:id="liste_cat" layoutX="133.0" layoutY="737.0" mnemonicParsing="false" onAction="#loadAthleteByCategory" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="Afficher" textFill="#fffefe">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="41.0" layoutY="160.0" prefHeight="32.0" prefWidth="110.0" text="Categorie :" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_temp_log" layoutX="804.0" layoutY="751.0" prefHeight="32.0" prefWidth="202.0" />
+      <Pane layoutX="-4.0" prefHeight="135.0" prefWidth="1406.0" style="-fx-background-color: #E74C3C#E74C3C;">
+         <children>
+            <Button fx:id="back_to_category" contentDisplay="GRAPHIC_ONLY" layoutX="25.0" layoutY="37.0" mnemonicParsing="false" onAction="#backToCategory" prefHeight="55.0" prefWidth="110.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="Retour" textFill="#fffefe">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/retour.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

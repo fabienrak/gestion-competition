@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #2c3e50#2c3e50;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.attila.controller.CategorieController">
+   <children>
+      <TableView fx:id="table_data_athlete" layoutX="40.0" layoutY="203.0" onMousePressed="#getMulipleValue" prefHeight="523.0" prefWidth="875.0">
+        <columns>
+          <TableColumn fx:id="COL_NUM" prefWidth="75.0" text="NUMERO" />
+          <TableColumn fx:id="COL_CLUB" prefWidth="75.0" text="CLUB" />
+            <TableColumn fx:id="COL_NOM" prefWidth="75.0" text="NOM" />
+            <TableColumn fx:id="COL_PRENOM" prefWidth="75.0" text="PRENOM" />
+            <TableColumn fx:id="COL_GENRE" prefWidth="75.0" text="GENRE" />
+            <TableColumn fx:id="COL_AGE" prefWidth="75.0" text="AGE" />
+            <TableColumn fx:id="COL_CEINTURE" prefWidth="75.0" text="CEINTURE" />
+            <TableColumn fx:id="COL_POIDS" prefWidth="75.0" text="POIDS" />
+            <TableColumn fx:id="COL_GI" prefWidth="75.0" text="GI" />
+            <TableColumn fx:id="COL_NOGI" prefWidth="75.0" text="NOGI" />
+            <TableColumn fx:id="COL_ID" prefWidth="75.0" text="ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_load_data" layoutX="88.0" layoutY="739.0" mnemonicParsing="false" onAction="#loadAthleteData" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="Charger  les donnee" textFill="#fffefe">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="search_field" layoutX="143.0" layoutY="161.0" prefHeight="34.0" prefWidth="245.0" promptText="Nom, Club, ID, ...">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="40.0" layoutY="161.0" prefHeight="34.0" prefWidth="130.0" text="Recherche :" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_creation_categorie" layoutX="319.0" layoutY="739.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="Creer categorie" textFill="#fffefe">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_tri_poids" layoutX="537.0" layoutY="739.0" mnemonicParsing="false" onAction="#loadAthleteDataByPoids" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="TRI PAR POIDS" textFill="#fffefe">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="check_poids" layoutX="976.0" layoutY="224.0" mnemonicParsing="false" onAction="#handleTriCheckBox" text="par poids" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="check_age" layoutX="1175.0" layoutY="224.0" mnemonicParsing="false" text="par age" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="check_genre" layoutX="976.0" layoutY="378.0" mnemonicParsing="false" text="par genre" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="check_grade" layoutX="1175.0" layoutY="378.0" mnemonicParsing="false" text="par ceinture" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <ComboBox fx:id="combobox_poids" layoutX="976.0" layoutY="290.0" prefHeight="34.0" prefWidth="177.0" />
+      <ComboBox fx:id="combobox_age" layoutX="1175.0" layoutY="290.0" prefHeight="34.0" prefWidth="191.0" />
+      <Label layoutX="976.0" layoutY="249.0" prefHeight="34.0" prefWidth="177.0" text="Poids disponible :" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1175.0" layoutY="249.0" prefHeight="34.0" prefWidth="177.0" text="Age disponible :" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_debug" layoutX="1071.0" layoutY="522.0" mnemonicParsing="false" onAction="#loadTriData" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="Filtrer" textFill="#fffefe">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="combobox_genre" layoutX="976.0" layoutY="448.0" prefHeight="34.0" prefWidth="177.0" />
+      <ComboBox fx:id="combobox_ceinture" layoutX="1175.0" layoutY="448.0" prefHeight="34.0" prefWidth="191.0" />
+      <Label layoutX="976.0" layoutY="402.0" prefHeight="34.0" prefWidth="177.0" text="Genre disponible :" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1175.0" layoutY="402.0" prefHeight="34.0" prefWidth="177.0" text="Ceinture disponible :" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_nom_categorie" layoutX="991.0" layoutY="692.0" prefHeight="34.0" prefWidth="279.0" text="aucun" textFill="#1b384af0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="go_to_match" layoutX="1198.0" layoutY="739.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="Gestion Match" textFill="#fffefe">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Pane layoutX="-2.0" prefHeight="135.0" prefWidth="1400.0" style="-fx-background-color: #E74C3C#E74C3C;">
+         <children>
+            <Button fx:id="btn_retour" contentDisplay="GRAPHIC_ONLY" layoutX="31.0" layoutY="35.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="101.0" style="-fx-background-color: #E74C3C#E74C3C; -fx-background-radius: 20;" text="Retour" textFill="#fffefe">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/retour.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
